@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package transactions;
+
+service TransactionRetreiverService {
+  rpc getTransactions (Empty) returns (Empty) {};
+}
+
+message Empty {}
+
+message Transaction {
+  int32 id = 1;
+  string description = 2;
+}
